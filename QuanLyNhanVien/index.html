@@ -10,6 +10,8 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+     <!-- Favicon -->
+     <link rel="icon" href="https://kome.vn/wp-content/uploads/2016/03/MG_6994-256x256.jpg" type="image/x-icon">
 
     <!-- Bootstrap 4 -->
     <link rel="stylesheet" href="css/bootstrap.min.css" />
@@ -29,6 +31,7 @@
   </head>
 
   <body>
+    
     <div class="wrapper">
       <!-- Sidebar Holder -->
       <nav id="sidebar">
@@ -149,10 +152,10 @@
               <div class="row mb-3">
                 <div class="col">
                   <div class="input-group">
-                    <input
+                    <input onsubmit="searchEmployee(); return false;"
                       type="text"
                       class="form-control"
-                      placeholder="Loại nhân viên"
+                      placeholder="Tên nhân viên"
                       id="searchName"
                     />
                     <div class="input-group-prepend">
@@ -175,9 +178,13 @@
                     <th>Email</th>
                     <th>Ngày làm</th>
                     <th>Chức vụ</th>
+                    <th>Lương cơ bản</th>
+                    <th>Số giờ làm/tháng</th>
                     <th>Tổng lương</th>
                     <th>Xếp loại</th>
-                    <th><em class="fa fa-cog"></em></th>
+                    <th>
+                      <i class="fa fa-cog"></i>
+                    </th>
                   </tr>
                 </thead>
                 <tbody id="tableDanhSach"></tbody>
@@ -334,7 +341,7 @@
                   </div>
                   <select class="form-control" id="chucvu">
                     <option>Chọn chức vụ</option>
-                    <option>Sếp</option>
+                    <option>Giám đốc</option>
                     <option>Trưởng phòng</option>
                     <option>Nhân viên</option>
                   </select>
